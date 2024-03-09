@@ -1,0 +1,15 @@
+                 42
+        31               59
+    29      33       54      60
+27    30  32  38   51
+  28
+
+: \vspace{2.5mm} \noindent First, we perform \texttt{remove(31)} by replacing 31 with its successor 32 and deleting the node to the left of 33 to get the resulting tree:
+
+                 42
+        32               59
+    29      33       54      60
+27    30      38   51
+  28
+
+: \vspace{2.5mm} \noindent We see that the left subtree of 32 has a height of 2 and the right subtree of 32 has a height of 1. Since the difference between the two hieghts is 1, the subtree is balanced at this node. Similarly, the left subtree of 33 has a height of -1 and the right subtree of 38 has a height of 0. Since the difference between the two heights is 1, the subtree is balanced at this node. We can apply to same logic to the left subtree of 32 and find that, since the difference between the heights of each node's subtree is at most one, the tree is already an AVL tree, so we do not need to perform any rotations.

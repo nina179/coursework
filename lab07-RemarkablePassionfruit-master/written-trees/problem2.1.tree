@@ -1,0 +1,27 @@
+        8
+    6       7
+  5   4   6   4
+ 2 1 3 2 4
+
+: \vspace{2.5mm} \noindent A heap is an invariant of a complete tree, and since elements in a complete tree are read in from left to right from the root down, when we perform \texttt{insert(8)}, we get the resulting tree:
+
+          8
+      6       7
+    5   4   6   4
+  2  1 3 2 4 8
+
+: \vspace{2.5mm} \noindent By definition, a heap must be complete tree where each node is greater than or equal to all of its subsequent children. However, 8 is greater than its parent 6, so we call \texttt{bubbleUp(8)} to swap 8 with its parent to get the resulting tree:
+
+            8
+        6       7
+      5   4    8  4
+    2  1 3 2  4 6
+
+: \vspace{2.5mm} \noindent However, 8 is still greater than its parent 7, so we call \texttt{bubbleUp(8)} once more to swap 8 and 7 to get the resulting tree:
+
+             8
+        6               8
+    5       4      7        4
+  2  1    3   2 4    6
+
+: \vspace{2.5mm} \noindent Now, the priority at each heap node is greater than or equal to all its children.

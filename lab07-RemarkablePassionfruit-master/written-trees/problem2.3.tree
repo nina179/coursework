@@ -1,0 +1,34 @@
+# TODO: show the list interpreted as a complete binary tree
+: \vspace{2.5mm} \noindent In a complete binary tree, each element would be read in from left to right to get the resulting tree:
+
+                                        2
+                            2                       9
+                        8       9           3               5
+
+# TODO: show each bubble-down operation as the tree is heapified
+
+: \vspace{2.5mm} \noindent By definition, a heap must be complete tree where each node is greater than or equal to all of its subsequent children. Because the above tree violates the second property, it is not a heap, so we must call \texttt{heapify()} on it. \texttt{heapify} calls \texttt{bubbleDown()} on each node, starting from the leftmost node at depth 0 and moving up the tree from left to right. So, to heapify the complete tree, we start at 8 and call \texttt{bubbleDown(8)}. Since 8 has no children, the tree remains unchanged. The same is true when we call \texttt{bubbleDown()} on 9, 3, and 5. 
+:
+: \vspace{2.5mm} \noindent As we move into the nodes at depth 1 and call \texttt{bubbleDown(2)}, we see that 2 is less than both its children 8 and 9, so we swap 2 with it's max child, which is 9, and get the resulting tree:
+
+                        2
+                    9        9
+                8     2    3    5
+
+
+: \vspace{2.5mm} \noindent Since $9 > 8$ and $9 > 2$, the subtree at that node 9 is heapified. We then call \texttt{bubbleDown(9)} on the node to the right, but since 9 is greater than both of its children 3 and 5, the subtree remains unchanged.
+:
+: \vspace{2.5mm} \noindent Finally, we call \texttt{bubbleDown(2)} on the root node. Because $2 < 9$ and $leftChild = rightChild$, we swap 2 with the left child and get the resulting tree:
+
+                    9
+                2       9
+            8      2  3    5
+
+: \vspace{2.5mm} \noindent Because 2 is not greater than or equal to both of its subchildren, we call \texttt{bubbleDown(2)} again and swap 2 with its max child 8 to get the resulting tree:
+
+                    9
+                8       9
+            2      2   3   5
+
+
+: \vspace{2.5mm} \noindent Now the priority at each node is greater than the priority of its subchildren, so we know that complete tree has been heapified.
