@@ -1,0 +1,11 @@
+Rose.ppm:
+"Rose, Kibou" by Yoko Nekonomania - Flickr: Rose, Kibou. Licensed under CC BY 2.0 via Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Rose,_Kibou.jpg#/media/File:Rose,_Kibou.jpg
+
+Gerbil.ppm:
+"Gerbil Awesomness" by Pie999999999 - Own work. Licensed under CC BY-SA 3.0 via Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Gerbil_Awesomness.JPG#/media/File:Gerbil_Awesomness.JPG
+
+HorizontalGradient.ppm:
+Swarthmore Computer Science department.  Licensed under public domain.
+
+VerticalGradient.ppm:
+Swarthmore Computer Science department.  Licensed under public domain.
