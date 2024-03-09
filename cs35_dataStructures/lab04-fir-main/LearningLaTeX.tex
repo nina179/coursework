@@ -1,0 +1,187 @@
+% This is a LaTeX file.  LaTeX is a language which can be used to
+% typeset documents similar to those one might get from
+% e.g. OpenOffice or Microsoft Word.  The difference is that, while
+% those are "WYSIWYG" ("what you see is what you get") tools, LaTeX is
+% a markup language.  This has advantages and disadvantages, but one
+% of the major advantages is in writing documents that involve a lot
+% of symbols or patterns.  You are not required to use this file (or
+% LaTeX in general) to complete your work, but we expect it will help.
+% :)
+
+% First and foremost: LaTeX files must be compiled like C++ programs.
+% In order to compile your LaTeX file, run
+%
+%     pdflatex LearningLaTeX.tex
+%
+% This will produce a file LearningLaTeX.pdf which you may then
+% view with a PDF viewer:
+%
+%     evince LearningLaTeX.pdf
+%
+% Remember that you must recompile your document if you change the
+% .tex file!
+
+% The rest of this document will contain some examples of how to use
+% LaTeX.  As you may have guessed, the
+% '%' character is an end-of-line comment marker, much
+% like // in C++ or # in Python.  Keep reading!
+
+
+
+% The following command is typically the first in any document.  It
+% says that we want the PDF to be in an article format.  It's a
+% sensible default for simple documents.  Commands in LaTeX start with
+% a backslash.  Some commands take arguments, each of which is
+% surrounded by a pair of braces.  So, in LaTeX,
+%
+%     \documentclass{article}
+%
+% is sort of writing this in C++:
+%
+%     documentclass("article");
+\documentclass{article}
+
+% Next, we need to bring in common commands, just like we would in
+% Python or C++.  Rather than "import" or "#include", we use the
+% "\usepackage" command.
+
+\usepackage{amsmath} % Math notation from the American Mathematical Society.
+\usepackage{amssymb} % Typographical symbols from the same.
+
+% In addition to commands, LaTeX has an idea of "environments".  These
+% are sort of like indentation in Python or the { ... } notation in
+% C++, but they differ in what they do.  The most important
+% environment is called "document" and everything that appears in your
+% document must be inside of it.  We start an environment with the
+% "begin" command and stop it with the "end" command.  Although it is
+% not necessary, we typically indent the contents of the environment
+% to make the .tex file easier to read.
+\begin{document}
+
+% Everything we've seen so far has been a comment or a command.  If I
+% want text, all I have to do is put it inside of this document
+% environment.
+    Hello!
+% Extra spaces in LaTeX don't matter, so that "Hello!" won't be
+% indented.  Instead, it will be in paragraph.  In fact, newlines are
+% treated like spaces, so the following is on the same line.
+How are you?
+
+    % If you want a new paragraph, you insert a blank line.  Since the above
+    % line is blank, the following will be in its own paragraph.
+    This is a new paragraph.
+
+    % Basic text formatting is pretty simple in LaTeX.  The \textbf command
+    % makes boldfaced text; the \textit command makes text italic.  For
+    % instance:
+    \textbf{This is bold.} \textit{This is italic.} This is plain text.
+    % If you have a good editor, the above might even be rendered to
+    % hint at the font changes.
+
+    % So far, everything we have written has been in "paragraph mode".
+    % It is also possible to write LaTeX in "math mode".  One way of
+    % entering math mode is to write a dollar sign.  Another dollar
+    % sign leaves math  mode.  This kind of math mode can be
+    % written alongside text.
+    
+    Here's something in paragraph mode: 4+2x.
+    Here it is in math mode: $4+2x$.
+
+    % Math mode is also important because it allows you to use the
+    % mathematical
+    % notation from the AMS packages that we named above.  For
+    % instance, the
+    % command \ldots draws a sequence of dots, like an ellipse.
+    $1+2+\ldots+10 = 55$
+
+    % In math mode (but not in paragraph mode), the symbols ^ and _ have special
+    % meaning: they superscript or subscript the very next thing.  For instance,
+    % the following produces the letter "x" with a subscripted "i" and a
+    % superscripted "10".
+    $x_{i}^{10}$
+
+    % Let's consider using those subscripts for our purposes.  We might want to
+    % write a summation; conveniently, this is possible with the \sum command.
+    % Fractions can be written using \frac, which takes two arguments: the
+    % numerator and the denominator.  The following, for instance, is a common
+    % summation:
+    $\sum_{i=1}^{n} i = 1 + 2 + \ldots + n = \frac{n(n+1)}{2}$
+
+    % That summation looks a little funny.  If we want the superscript
+    % immediately above it, we can add the \limits command.  Also, we might not
+    % want the numerator and denominator to shrink; we can use \dfrac instead of
+    % \frac for that.
+    $\sum\limits_{i=1}^{n} i = 1 + 2 + \ldots + n = \dfrac{n(n+1)}{2}$
+
+    % This could get kind of hard to read.  If you need a little vertical
+    % spacing, you can use the \vspace command.  It takes an argument describing
+    % the amount of space, which can be written in different measurements.
+    \vspace{5mm}
+
+    % For Big-O proofs, we'll also want to be able to write the logical
+    % quantifiers "for all" and "exists" (the upside-down A and the backwards
+    % E).  Conveniently, these are accessible via the \forall and \exists
+    % commands.
+    $\forall x>0. \exists y<0. x+y = 0$
+
+    % We can also get comparison symbols such as "greater than or equal to" if
+    % we know the right name.
+    \vspace{5mm}
+    $x \geq y \leq z$
+
+    % Finally, we'll want to be able to write out our proofs in an organized
+    % fashion.  The $...$ form is good for inlining text into paragraphs,
+    % but sometimes we just want a big block of math.  There's an environment
+    % called "math" that does this:
+    \vspace{5mm}
+    \begin{math}
+        % Everything inside of this environment defaults to math mode.  Within
+        % this environment, you can write anything that's legal inside of the
+        % $...$ delimiters.  In math mode, though, spaces and newlines are
+        % handled differently; a blank line does not start a new paragraph.  To
+        % make things line up nicely, we'll use an environment called "array".
+        %
+        % The array environment represents a table-like grid.  It takes an
+        % argument describing the columns of the grid.  Each column is separated
+        % with "&" and each row is separated with "\\".  For instance, the
+        % following is a grid of numbers.
+        \begin{array}{l l l}
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            & 11 & 13 \\
+        \end{array}
+        % This grid is 3 columns wide because there are 3 "l"s in the argument
+        % to the array environment.  "l" means "left-aligned"; we could also
+        % have "c" or "r" for center or right, respectively.  The lower-left
+        % corner of the grid doesn't have anything in it; we can leave cells
+        % empty.
+    \end{math}
+
+    % Here's another block of math as a new paragraph!
+    \vspace{5mm}
+    \begin{math}
+        % We can use these arrays to build proof-like layouts.  For instance,
+        % I might work on a polynomial product like so:
+        \begin{array}{r c l}
+            (2x + 3)(x^{2} - x) & = & 2x(x^{2}) + 3(x^{2}) - 2x(x) - 3(x) \\
+                                & = & 2x^{3} + 3x^{2} - 2x^{2} - 3x \\
+                                & = & 2x^{3} + x^{2} - 3x \\
+        \end{array}
+    \end{math}
+
+    \vspace{5mm}
+    \begin{math}
+        % If you need normal text inside of a math environment, one way to
+        % render it is using the \textnormal command.
+        x^{2} + 3x + 5 \textnormal{ is } O(x^{2})
+    \end{math}
+
+    % LaTeX is a complex language with a lot of community-written libraries and
+    % other features.  Conference articles and even entire books are often
+    % written in this format.  There's a lot one could learn about this system,
+    % but the above should see you through CS35 and several other courses where
+    % basic mathematical notation is required.
+    %
+    % And as an added bonus, you can keep more of your homework on your hard
+    % drive instead of on paper.  :)
+\end{document}
