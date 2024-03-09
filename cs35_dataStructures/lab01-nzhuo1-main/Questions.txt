@@ -1,0 +1,35 @@
+Answer the following questions by modifying this text file.  Write
+your answers between each question.  You're not being graded or judged
+on these answers.
+
+1. What is your name?  What do you prefer to be called?
+    Nina Zhuo
+
+
+2. Why are you taking CS35?
+    to get beyond foundation programming and learn about new modes of computing
+
+
+3. What is your previous experience in Computer Science?  What
+programming languages do you know, and which classes have you taken?
+    took web development and python programming classes in HS
+    took CS21 in the f22 semester
+    spent the summer doing website building and some work in assistive tech
+
+
+4. These are a couple questions about how you approach your assignments.
+
+  a. Do you start on your homework as soon as it is assigned or do you
+  tend to finish it right before it's due?
+      as soon as it is assigned
+
+
+  b. When doing group work, do you prefer for your group to split your
+  work up into pieces or do you like to work together as a group
+  through as much of the material as possible?
+      depends on the assignment, but usually split up, then come together to
+      discuss and make changes as needed
+
+
+5. What do you consider fun?
+      solving puzzles, crocheting, creative writing
