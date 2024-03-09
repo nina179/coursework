@@ -1,0 +1,14 @@
+           19
+    12              27
+  8    13       22      30
+ 6 9          21      28
+
+: \vspace{2.5mm} \noindent The binary search property dictates that $A < x < B < y < C$ where $x$ is the node we want to rotate around, $y$ is the node rotating around it. For this tree, $(A = 8) < (x = 12) < (y = 13)$. There is no $B$ or $C$ in this instance because the right child of the subtree rooted at $x = 12$ is $y$ and the children of $y = 13$ are \texttt{null}.
+:
+: \vspace{2.5mm} \noindent So, when we call \texttt{leftRotate(12)}, we get the resulting tree:
+
+                 19
+            13          27
+          12         22      30
+        8          21      28
+      6   9
