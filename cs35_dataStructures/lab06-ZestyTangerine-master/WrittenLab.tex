@@ -1,0 +1,270 @@
+% This LaTeX file contains your written lab questions.  You may answer
+% these questions just by inserting your answer into this document.
+%
+% If you're unfamiliar with LaTeX, see the document LearningLaTeX.tex
+% in this same directory.  It contains a brief explanation and a few
+% snippets of LaTeX code to get you started; in fact, it should have
+% everything you need to complete this assignment.
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{alltt}
+\usepackage{enumerate}
+
+\newtheorem{claim}{Claim}
+
+\begin{document}
+    \section{Inductive Proofs}
+
+    Prove each of the following claims by induction
+
+    \begin{claim}
+      The sum of the first $n$ even numbers is $n^2 + n$.  That is, 
+      $\sum\limits_{i=1}^{n} 2i = n^2 + n$.
+    \end{claim}
+
+      \begin{proof}
+
+        \begin{enumerate}
+
+          \item We set the base case at $n=1$ and solve each side of the equation 
+          to see if they are equal to each other.
+          \vspace{0.5cm}
+
+            $\sum\limits_{i=1}^{1} 2i = (2 \cdot 1)$
+
+            \hspace{1cm}$= 2$
+            
+            \vspace{0.5cm}
+
+            $n^2 + n = 1^2 + 1$ 
+
+            \hspace{1cm}$= 1 + 1$
+
+            \hspace{1cm}$= 2$
+
+        \item Assume that for some integer $k$, we get the inductive hypothesis
+        \[\sum\limits_{i=1}^{k} 2i = k^2 + k\]
+        \vspace{.25cm}
+
+        \item If the formula assumed in step 2 is true, it will also 
+        be true for $n = k+1$. We can test this by plugging $k+1$ into
+        the formula giving us
+        \[\sum\limits_{i=1}^{k+1} 2i = (k+1)^2 + (k+1)\]
+
+          $\sum\limits_{i=1}^{k+1} 2i = \sum\limits_{i=1}^{k} 2i + 2(k+1)$
+          \hspace{1.5cm} separate the last term of the sum
+
+          \hspace{1cm}$= (k^2 + k) + 2(k+1)$ 
+          \hspace{1cm} by applying inductive hypothesis
+
+          \hspace{1cm}$= k^2 + 3k + 2$
+          \hspace{2.15cm} by math
+          
+          \vspace{0.5cm}
+
+          $(k+1)^2 + (k+1) = (k^2 + 2k + 1) + (k + 1)$ 
+
+          \hspace{1cm}$= k^2 + 3k + 2$
+          \vspace{.5cm}
+
+        Given the above, we can assume by induction that the equation is 
+        true for all $n$ where $n>1$.
+        \end{enumerate}
+        
+      \end{proof}
+
+    \begin{claim}
+      $\sum\limits_{i=1}^{n} 3^i = \frac{3}{2} (3^n-1)$
+      \vspace{.5cm}
+    \end{claim}
+
+      \begin{proof}
+
+        \begin{enumerate}
+          \item We set the base case at $n=1$ where 1 is the lower bound 
+          and solve each side of the equation to see if they are equal to 
+          each other.
+
+            $\sum\limits_{i=1}^{1} 3^i = 3^1$
+
+            \hspace{1cm}$= 3$
+            
+            \vspace{0.25cm}
+
+            $\frac{3}{2} (3^n-1) = \frac{3}{2} (3^1-1)$ 
+            \vspace{.25cm}
+
+            \hspace{1cm}$= \frac{3}{2} (2)$
+            \vspace{.25cm}
+
+            \hspace{1cm}$= \frac{6}{2}$
+            \vspace{.25cm}
+
+            \hspace{1cm}$= 3$
+
+          \item Assume that for some integer $k$, we get the inductive hypothesis
+            \[\sum\limits_{i=1}^{k} 3^i = \frac{3}{2} (3^k-1)\]
+
+        \item If the formula assumed in step 2 is true, it will also 
+        be true for $n = k+1$. We can test this by plugging $k+1$ into
+        the formula giving us \[\sum\limits_{i=1}^{k+1} 3^i = \frac{3}{2} (3^{k+1}-1)\]
+        
+          $\sum\limits_{i=1}^{k+1} 3^i =\sum\limits_{i=1}^{k} 3^i + 3^{k+1}$
+          \hspace{1.5cm} separate the last term of the sum
+          \vspace{.25cm}
+
+          \hspace{1cm}$= \frac{3}{2} (3^k-1) + 3^{k+1}$
+          \hspace{.75cm} by applying inductive hypothesis
+          \vspace{.25cm}
+
+          \hspace{1cm}$= \frac{3}{2} \cdot 3^k - \frac{3}{2} + 3^k \cdot 3$
+          \hspace{.65cm} by math
+          \vspace{.5cm}
+          
+          \hspace{1cm}$= \frac{9}{2} \cdot 3^k - \frac{3}{2}$
+          \vspace{.5cm}
+
+          \hspace{1cm}$= \frac{3}{2}(3 \cdot 3^k -1)$
+          \vspace{.5cm}
+
+          \hspace{1cm}$=  \frac{3}{2} (3^{k+1}-1)$
+          \vspace{.5cm}
+
+        Given that the above is equal to the right hand side of the equation, 
+        we can assume by induction that the equation in step 2 true for all 
+        $n$ where $n>1$.
+        \end{enumerate}
+
+      \end{proof}
+
+    \begin{claim}
+      For any integer $n\geq1$, $5^n-1$ is divisible by $4$.  In other 
+      words, for every positive integer $n$ there exists some constant 
+      $z_n$ such that $5^n - 1 = 4z_n$.  (Note that $z_n$ denotes a 
+      different $z$ for each power of $5$; that is, $5^1 - 1 = 4z_1$, 
+      $5^2 - 1 = 4z_2$, and so on for a series of $z_n$ values.)  You 
+      may write your proof in general terms of divisibility by four or 
+      in specific terms by solving for $z_n$ in the inductive case.
+      \vspace{.5cm}
+    \end{claim}
+
+      \begin{proof}
+
+        \begin{enumerate}
+
+          \item We set the base case at $n=1$ where 1 is the lower bound 
+          and $z_n=4n$ solve each side of the equation to see if 
+          they are equal to each other.
+          \vspace{.25cm}
+
+            $5^1-1 = 5-1$
+
+            \hspace{1cm}$= 4$
+            \vspace{0.5cm}
+
+            $4z_n = 4(1)$ 
+
+            \hspace{1cm}$= 4$
+            \vspace{.25cm}
+
+            \item Assume that for some integer $k$, we get the inductive hypothesis
+            \[5^k-1 = 4z_k\]
+
+        \item If the formula assumed in step 2 is true, it will also 
+        be true for $n = k+1$. We can test this by plugging $k+1$ into
+        the formula giving us \[5^{k+1}-1 = 4z_{k+1}\]
+        
+          $5^{k+1} = 5^k \cdot 5$
+          \hspace{3.5cm}rewrite the $k+1$ term
+
+
+          \hspace{1cm}$= 5(4{z_k+1})$
+          \hspace{2.5cm}by inductive hypothesis
+          \vspace{.5cm}
+
+          so, $5(4z_k+1)-1 = 20z_k + 4$
+          \hspace{1cm}substitute back into inductive step
+
+          \hspace{1cm}$= 4(5z_k + 1)$
+          \hspace{2.5cm}by math
+          \vspace{.5cm}
+          
+          Because the above is divisible by 4, then $5^{k+1} -1$ is also 
+          divisible by 4.
+
+        \end{enumerate}
+
+      \end{proof}
+
+    \vspace{1cm}
+    \section{Recursive Invariants}
+    
+    The function \texttt{maxOdd}, given below in pseudocode, takes as 
+    input an array $A$ of size $n$ of numbers.  It returns the largest 
+    \emph{odd} number in the array.  If no odd numbers appear in the 
+    array, it returns negative infinity ($-\infty$).  Using induction, 
+    prove that the \texttt{maxOdd} function works correctly.  Clearly 
+    state your recursive invariant at the beginning of your proof.
+
+    \begin{alltt}
+      Function maxOdd(A,n)
+        If n = 0 Then
+          Return -infinity
+        Else
+        Set best To maxOdd(A,n-1)
+          If A[n-1] > best And A[n-1] is odd Then
+            Set best To A[n-1]
+          EndIf
+          Return best
+        EndIf
+      EndFunction
+    \end{alltt}
+
+    \begin{proof}
+
+      Our recursive invariant is $P(A, n)$ where if the array $A$ contains 
+      an odd number, the function \texttt{maxOdd} will return $best$ as the 
+      largest odd number in array $A$ up to index $n-1$ where $n$ is the 
+      length of array $A$. If no odd number exists in array $A$, \texttt{maxOdd}
+      will return negative infinity.
+
+      \begin{enumerate}
+        \item We set the base case to $n=0$ where the array $A$ is an 
+        empty array containing no elements.
+
+        According to the pseudocode, if $n=0$, the function 
+        will return negative infinity so we know that \texttt{maxOdd} works 
+        for the base case.
+
+        \item Assume that, given an array of up to size $k$, the function 
+        \texttt{maxOdd} will always return the greatest odd number in the 
+        array $A$ up to index $k-1$.
+       
+        \item If the inductive hypothesis made in step 2 is true, it will 
+        also be true for $k+1$. We can test this by running $P(A, k+1)$.
+
+        In the case that the array $A$ contains $k+1$ number of elements 
+        and the array at index $k+1-1$ or $k$ is an odd number that is greater than 
+        $best$ up to index $k-1$, we know that for $P(A, k)$, \texttt{maxOdd} will 
+        return the greatest odd number in array $A$ up to index $k-1$ because of 
+        the inductive hypothesis. Adding an additional element that is an odd number 
+        greater than $best$ up to index $k-1$ will reset $best$ to the greatest odd 
+        number at index $(k+1) - 1$ or $k$.
+
+        However, if the array $A$ contains $k+1$ number of elements and the array at index 
+        $(k+1)-1$ is not an odd number greater than $best$ up to index $k-1$, we know that
+        we know that for $P(A, k)$, \texttt{maxOdd} will return the greatest odd number 
+        in array $A$ up to index $k-1$ because of 
+        the inductive hypothesis. Adding an additional element that is not an odd number 
+        greater than $best$ up to index $k-1$ will not change the value of $best$.
+        
+        \end{enumerate}
+
+    \end{proof}
+    
+    \end{document}
