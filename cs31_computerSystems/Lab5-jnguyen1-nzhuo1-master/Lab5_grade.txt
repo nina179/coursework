@@ -1,0 +1,26 @@
+
+
+Lab5 : Assembly Maze
+
+Repo: jnguyen1-nzhuo1
+Maze number: 40
+Checkpoint: 5
+Floors solved: 4
+Trip-ups: 2
+Autograded score (Floors 1-4): 40
+
+>>  How we solved level 1: 
+[ /2 pts ]: 2
+
+>>  How we solved level 2: 
+[ /2 pts ]: 2
+
+>>  How we solved level 3: 
+[ /2 pts ]: 2
+
+>>  How we solved level 4: 
+[ /2 pts ]: 2
+How solved subtotal [ /8 pts]: 8
+Extra Credit (requires solving the floor and giving an explanation): 0
+Total (/53): 53
+

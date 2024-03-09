@@ -1,0 +1,90 @@
+
+
+Lab2 : Binary Arithmetic and C Representation
+
+Repo: nzhuo1-xpeshla1
+p1q1: 2
+p1q1 Comments: 
+
+
+p1q2: 2
+p1q2 Comments: 
+
+
+p1q3: 2
+p1q3 Comments: 
+
+
+p1q4: 2
+p1q4 Comments: 
+
+
+p1q5a: 3
+p1q5a Comments: 
+
+
+p1q5b: 2
+p1q5b Comments: 
+
+
+p1q5c: 4.5
+p1q5c Comments: 
+
+
+p1q5d: 3
+p1q5d Comments: 
+
+
+p1q6: 6
+p1q6 Comments: 
+
+
+p1q7: 8
+p1q7 Comments: 
+
+
+p1q8: 15.5
+p1q8 Comments: 
+
+
+p1q9: 12
+p1q9 Comments: 
+
+
+Part1 (/67): 62
+p2q1: 10
+p2q1 Comments: 
+
+
+p2q2: 10
+p2q2 Comments: 
+
+
+p2q3: 9
+p2q3 Comments: Hex value of 0x80000000 is equal to the positive max value not
+negative
+
+
+p2q4: 10
+p2q4 Comments: 
+
+
+p2q5: 10
+p2q5 Comments: 
+
+
+p2q6: 10
+p2q6 Comments: 
+
+
+Style: 3
+Style Comments: Some lines pass 80 characters
+
+
+Part2 (/64): 62
+Total (/131): 124
+Score: 94.7%
+General Comments: Nice job!
+
+
+

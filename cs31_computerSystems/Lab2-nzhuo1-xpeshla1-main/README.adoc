@@ -1,0 +1,26 @@
+= Data Representation and Arithmetic Operations
+
+To compile:
+  make
+
+To clean-up compiled code:
+   make clean
+
+Answer Part 1 questions on the separate PDF linked on the lab webpage. 
+
+Answer Part 2 in `datarep.c`. Add your C code (then type make to compile):
+
+$ code datarep.c
+
+$ make
+
+$ ./datarep
+
+To add and commit changes to your git repo and push to master:
+
+$ git commit -am "<useful message about your progress>"
+
+$ git push
+
+Make sure that you commit and push of your `datarep.c` solution before
+the due date of the lab.

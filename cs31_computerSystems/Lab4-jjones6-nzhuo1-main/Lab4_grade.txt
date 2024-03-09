@@ -1,0 +1,31 @@
+
+
+Lab4 : Dynamic Memory and Assembly
+
+Repo: jjones6-nzhuo1
+
+>>  Part1: get_values(): 
+[ pts off up to 2 ]: 0
+
+>>  Part1: Statistics & sorting: mean should return double. Median is wrong.
+[ pts off up to 1.5 ]: 0.75
+
+>>  Part1: General & miscellaneous: errors and memory leaks
+[ pts off up to 1.5 ]: 1
+
+>>  Part2: Assembly language sum.s: 
+[ pts off up to 4.5 ]: 0
+-------------------------
+Correctness (9pts): 7.25
+
+>>  program style comments: Please remove TODO comments next time.
+
+
+[ pts off up to 1 ]: 0
+
+-------------------------
+Total (10pts): 8.25
+>> comments to the students: Good Work!
+
+
+

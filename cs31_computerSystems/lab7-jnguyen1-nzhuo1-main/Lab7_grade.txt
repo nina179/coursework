@@ -1,0 +1,23 @@
+
+
+Lab7 : String Library
+
+Repo: jnguyen1-nzhuo1
+>>> autograder tests: tests 10 12 and 13 failed ( strcpy() and strstr() )(-3)
+[ up to 14 points ]: 11
+>>> stringtester.c: Great tests and comments
+[ up to 7 points ]: 7
+>>> valgrind tests: No leaks or errors
+[ up to 4 points ]: 4
+-------------------------
+Correctness (25 pts): 22
+
+----------------------
+Program style (1pts): 1
+
+-------------------
+Total (26pts): 23
+>> General comments: Great work
+
+
+

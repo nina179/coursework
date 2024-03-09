@@ -1,0 +1,37 @@
+
+
+Lab1 : C Introduction
+
+Repo: nzhuo1-tchen7
+
+>>  file input comments: 
+
+
+[ pts off ]: 0
+
+>>  printing comments: 
+
+
+[ pts off ]: 0
+
+>>  sorting comments: 
+
+
+[ pts off ]: 0
+-------------------------
+Correctness Total(9pts): 9
+
+>>  program style comments: Move comments to prototype. Don't forget parameters in comments. Lines
+over 80. Declare variable at top of function.
+
+
+
+-------------------------
+Program style (1pts): 1
+
+-------------------------
+Total (10pts): 10
+>> misc & general comments: Good Job!
+
+
+

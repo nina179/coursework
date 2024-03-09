@@ -1,0 +1,73 @@
+Enter Your Names Here: Jimmy Nguyen + Nina Zhuo
+----------------------
+
+maze puzzle 1: getting off of the roof  
+==============
+
+We run the program on gdb and set a breakpoint at phase_1 and tripped_up.
+
+In phase_1, the function will compare the input string with the answer
+string stored at %eax using string_not_equal to check if they match.
+We used gdb to examine the string stored at %eax so we know what the 
+solution string will be for phase_1.
+
+--------------------------------------------------------------------
+maze puzzle 2: getting past the residential floors
+==============
+
+We run the program on gdb and set a breakpoint at phase_2 and tripped_up.
+
+In phase_3, read_six_numbers goes through placeholder void registers, so
+it just checks to see that we have inputted 6 numbers. Then, it checks that 
+the first digit is greater than 2. We then enter into a for loop that goes
+for as long as the number stored in %ebx is less than 6 such that we iterate 
+over all 6 inputted numbers. The for loop then checks that each successive 
+number inputted is greater than its preceding digit by i. We do this by 
+comparing each i-th digit to the value of the (i-1) digit + i. Thus, 
+for any n > 2, we should input [n, n+1, n+2, n+3, n+4, n+5].
+
+--------------------------------------------------------------------
+maze puzzle 3: getting past Admissions
+==============
+
+We run the program on gdb and set a breakpoint at phase_3 and tripped_up.
+
+In phase_3, it checks that we have inputted at least 1 number. It runs 
+a compare so that if the number of inputs is less than or equal to 1,
+we enter into tripped_up. Otherwise, the it checks that the first integer
+inputted is an unsigned value that is less than 7 by using test and ja 
+to look at the condition flags that are set off when we perform bitwise
+and on the first inputted number. If the first input does not meet the
+specified conditions, we enter into tripped_up. The function will then 
+check the second number inputted and, if it is not equal to 801, which 
+is the value stored at %edx, we enter into tripped_up. Thus, phase_3 
+must consist of "if... else" statements to looks at the first 
+2 numbers inputted to see that the first value x is 0 < x < 7 and the 
+second value y = 801. Every subsequent number inputted is ignored and 
+does not affect the outcome of phase_3. 
+
+--------------------------------------------------------------------
+maze puzzle 4: getting past the Registrar's Office
+==============
+
+We run the program on gdb and set a breakpoint at phase_4 and tripped_up.
+
+In phase_4, we start with an if statement that checks that we have inputted 
+at least 2 numbers and goes into tripped_up otherwise. 
+
+We subtract 2 from the second number and compare the resulting value to 2. 
+If the result is below or equal to 2 and non-negative, we enter into a recursive 
+function func4, tripped_up otherwise. So, we know that our second number must
+be an unsigned value that is less than or equal to 4 and greater than 1.
+
+From here, we enter into the recursive function func4 which takes our second
+number and performs a series of operations that will store the desired 
+value of our first input in %eax. We return to phase_4, which compares the 
+the output of func4 to our first input value. If they are equal, we pass 
+the level, tripped_up otherwise. Thus, our solution should contain at least 
+2 values, the first of which will the output func4, stored at %eax, and the 
+second of which will be some integer x where 1 < x <= 4.
+
+--------------------------------------------------------------------
+Anything else?
+=============

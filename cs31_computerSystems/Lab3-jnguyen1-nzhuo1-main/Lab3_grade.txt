@@ -1,0 +1,68 @@
+
+
+Lab3 : Logic Gates
+
+Repo: jnguyen1-nzhuo1
+
+>>  Part 1 comments: Great work!
+
+
+[ pts off up to 1]: 0
+00: SF
+01: 
+02: 
+03: 
+04: 
+05: OF
+06: 
+07: OF
+08: OF
+09: 
+0A: 
+0B: OF
+0C: 
+0D: 
+0E: 
+0F: OF
+10: 
+11: OF
+12: SF
+13: SF
+14: 
+15: SF R
+16: R
+17: 
+18: SF R
+19: SF R
+1A: 
+1B: SF R
+1C: R
+1D: R
+1E: 
+1F: 
+20: 
+21: 
+
+>>  ALU operations comments: Probably used the wrong pin for result in the final circuit so it does
+not show up. Had to rewire the main2 circuit in order to see the
+result.
+
+
+[ ALU pts off up to 6]: 1.5
+
+>>  ALU flags comments: SF OF incorrect.
+
+
+[ FLAGS pts off up to 3]: 1.5
+
+>>  ALU layout & implementation comments: 
+
+
+[ total pts off ]: 3
+
+-------------------------
+Total (10pts): 7
+>> misc & general comments: Make sure to ask questions about what you got wrong!
+
+
+
